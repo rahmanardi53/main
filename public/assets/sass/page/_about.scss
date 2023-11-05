@@ -1,0 +1,99 @@
+/*--------------------------------------------------------------
+	#about
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#4.1	fun-fact-section
+--------------------------------------------------------------*/
+.fun-fact-section {
+	background-color: #f7f9fa;
+	padding: 100px;
+
+	@include media-query(991px) {
+		padding: 40px;
+	}
+
+	@include media-query(767px) {
+		padding: 30px;
+	}
+
+	.fun-fact-grids .grid {
+		width: 25%;
+		float: left;
+		position: relative;
+		padding: 0 0 0 65px;
+
+		@include media-query(991px) {
+			width: 50%;
+			margin: 0 0 50px;
+		}
+
+		@include media-query(767px) {
+			padding: 0 0 0 50px;
+		}
+
+		@include media-query(500px) {
+			width: 200px;
+			float: none;
+			margin: 0 auto 50px;
+		}
+	}
+
+	.icon {
+		position: absolute;
+		left: 0;
+		top: 0
+	}
+
+	.fi:before {
+		font-size: 45px;
+		font-size: calc-rem-value(45);
+		color: $theme-primary-color;
+
+		@include media-query(767px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+	}
+
+	.info {
+		border-left: 1px solid #efefef;
+		padding-left: 20px;
+
+		@include media-query(767px) {
+			padding-left: 15px;
+		}
+	}
+
+	.info h3 {
+		font-size: 48px;
+		font-size: calc-rem-value(48);
+		font-weight: bold;
+		margin: 0;
+
+		@include media-query(1199px) {
+			font-size: 40px;
+			font-size: calc-rem-value(40);
+		}
+
+		@include media-query(767px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+	}
+}
+
+.about-us-page-section {
+	padding-bottom: 0;
+}
+
+.about-us-page-feature {
+	margin-top: 95px;
+
+	@include media-query(991px) {
+		margin-top: 70px;
+	}
+
+	@include media-query(767px) {
+		margin-top: 60px;
+	}
+}

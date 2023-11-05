@@ -1,0 +1,30 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Roboto:300,500,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,700|Open+Sans:400,400i,600&display=swap');
+
+
+// fonts
+$base-font-size: 15;
+$base-font: 'Open Sans', sans-serif;
+$heading-font: 'Barlow Condensed', sans-serif;
+
+
+
+// color
+$dark-gray: #2a2a2a;
+$white: #fff;
+$black: #000;
+$black2: #151222;
+$mid-gray: #687187;
+$orange: #ff5e14;
+$blue: #020d26;
+
+$theme-primary-color: $orange;
+$theme-secondary-color: $blue;
+$body-bg-color: $white;
+$section-bg-color: #edecec;
+$text-color: $mid-gray;
+$heading-color: $black2;

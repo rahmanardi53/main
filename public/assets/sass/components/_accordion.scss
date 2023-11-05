@@ -1,0 +1,132 @@
+.theme-accordion-s1 {
+	margin-bottom: 0;
+
+	.panel-default {
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.panel-heading {
+		background-color: transparent;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.panel {
+		border: 1px solid #e6e8e8;
+		padding: 25px;
+	}
+
+	.panel+.panel {
+		margin-top: 15px;
+	}
+
+	.panel-heading a.collapsed:before {
+		content: "\e61a";
+	}
+
+	.panel-heading a {
+		font-family: $heading-font;
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		font-weight: 500;
+		color: $theme-primary-color;
+		display: block;
+		padding: 0 0 0 45px;
+		position: relative;
+
+		@include media-query(991px) {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			padding: 5px 25px 5px 45px;
+        }
+
+		@include media-query(767px) {
+			padding: 5px 25px 5px 45px;
+        }
+
+		&:before {
+			font-family: "themify";
+			content: "\e622";
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			color: $theme-primary-color;
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			border: 1px solid $theme-primary-color;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: -4px;
+
+			@include media-query(991px) {
+				font-size: 18px;
+				font-size: calc-rem-value(18);
+				left: 0;
+	        }
+		}
+
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	.panel-heading .collapsed {
+		background-color: transparent;
+		color: $heading-color;
+	}
+
+	.panel-heading .collapsed:before {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	.panel-heading+.panel-collapse>.panel-body {
+		background-color: transparent;
+		border: 0;
+		padding: 20px 0 0 25px;
+
+		@include media-query(991px) {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+		}
+
+		@include media-query(767px) {
+			padding: 10px 0 0 ;
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+
+
+		p {
+			margin-bottom: 1.3em;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.theme-accordion-s2 {
+	@extend .theme-accordion-s1;
+
+	.panel {
+	    padding: 35px 25px;
+	    border: 2px solid #f2f7fd;
+	}
+
+	.panel-heading+.panel-collapse>.panel-body {
+		background-color: transparent;
+		border: 0;
+		padding: 20px 0 0 45px;
+
+		@include media-query(767px) {
+			padding: 10px 0 0 ;
+		}
+	}
+}

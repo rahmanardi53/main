@@ -1,0 +1,83 @@
+.theme-btn {
+	background-color: $theme-primary-color;
+	font-size: 12px;
+	font-size: calc-rem-value(12);
+	font-weight: 600;
+	color: $white;
+	display: inline-block;
+	padding: 15px 45px 15px 25px;
+	border: 0;
+	@include rounded-border(60px);
+	text-transform: uppercase;
+	position: relative;
+
+	&:before {
+		font-family: "themify";
+		content: "\e649";
+		font-size: 12px;
+		font-size: calc-rem-value(12);
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		@include translatingY();
+		@include media-query(991px) {
+			display: none;
+		}
+	}
+
+	&:after {
+		content: "";
+		background: #ff7070;
+		width: 1px;
+		height: 100%;
+		position: absolute;
+		right: 35px;
+		top: 0;
+		@include transition-time(0.3s);
+		@include media-query(991px) {
+			display: none;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($theme-primary-color, 5%);
+		color: $white;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 12px 20px;
+	}
+
+	@include media-query(767px) {
+		padding: 12px 15px;
+		font-size: 13px;
+	}
+}
+
+.theme-btn-s2 {
+	@extend .theme-btn;
+
+	background-color: $white;
+	color: $heading-color;
+
+	&:after {
+		background: #f3eded;
+	}
+
+	&:hover:after {
+		background: #ff7070;
+	}
+
+	// &:hover {
+	// 	background-color: 
+	// }
+}
+
+.submit-btn {
+	@extend .theme-btn;
+	width: 100%;
+}

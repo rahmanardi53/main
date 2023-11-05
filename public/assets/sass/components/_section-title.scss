@@ -1,0 +1,97 @@
+.section-title {
+	margin-bottom: 40px;
+
+	> span {
+		font-family: $heading-font;
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		font-weight: 500;
+		color: $theme-primary-color;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: block;
+	    margin-top: -0.3em;
+	}
+	
+	@include media-query(767px) {
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		font-size: 46px;
+		font-size: calc-rem-value(46);
+		font-weight: bold;
+		margin: 0.2em 0 0;
+		padding-bottom: 0.5em;
+		position: relative;
+
+		@include media-query(991px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+
+		@include media-query(767px) {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+		}
+
+		&:before {
+			content: "";
+			background: $theme-primary-color;
+			width: 60px;
+			height: 4px;
+			border-radius: 5px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
+		&:after {
+			content: "";
+			background: $theme-primary-color;
+			width: 15px;
+			height: 4px;
+			border-radius: 5px;
+			position: absolute;
+			left: 65px;
+			bottom: 0;
+		}
+
+		span {
+			font-weight: 300;
+			display: block;
+		}
+	}
+}
+
+.section-title-s2 {
+	@extend .section-title;
+	text-align: center;
+
+	h2 {
+		color: $white;
+		&:before {
+			left: calc(50% - 30px);
+		}
+
+		&:after {
+			left: calc(50% + 33px);
+		}
+	}
+}
+
+.section-title-s3 {
+	@extend .section-title-s2;
+
+	h2 {
+		color: $heading-color;
+	}
+}
+
+.section-title-s4 {
+	@extend .section-title-s2;
+
+	h2 {
+		color: $heading-color;
+	}
+}

@@ -1,0 +1,22 @@
+.site-header .sticky-header {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: -300px;
+	z-index: 9999;
+	opacity: 0;
+	@include transition-time(0.7s);
+	visibility: hidden;
+}
+
+.site-header .sticky-on {
+	background: $theme-secondary-color;
+	opacity: 1;
+	top: 0;
+	visibility: visible;
+}
+
+.header-style-2 .sticky-on {
+	background: $white;
+	box-shadow: 0 0 15px rgba(197,188,188, 0.5);
+}

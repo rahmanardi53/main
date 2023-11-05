@@ -1,0 +1,416 @@
+/*--------------------------------------------------------------
+	#home style 2
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#2.1	features-section-s2
+--------------------------------------------------------------*/
+.features-section-s2 {
+	@extend .features-section;
+	margin: 110px 0;
+
+	@include media-query(991px) {
+		margin: 90px 0;
+	}
+
+	@include media-query(767px) {
+		margin: 80px 0;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.2	about-us-section-s2
+--------------------------------------------------------------*/
+.about-us-section-s2 {
+	@extend .about-us-section;
+	padding-bottom: 93px;
+
+	@include media-query(991px) {
+		padding-bottom: 68px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 58px;
+	}
+
+	.about-image {
+		text-align: left;
+	}
+
+	@include widther(1200px) {
+		.about-details {
+			padding-left: 25px;
+		}
+	}
+
+	.ceo-quote {
+		blockquote {
+			margin-top: 35px;
+		    background: #ff5e1408;
+		    border: 0;
+		    padding: 25px;
+		    font-size: 16px;
+		    line-height: 1.7em;
+		    border-left: 2px solid #fff1e8;
+		}
+
+		span {
+			display: block;
+			font-size: 13px;
+			padding-top: 15px;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.3	services-section-s2
+--------------------------------------------------------------*/
+.services-section-s2 {
+	background-color: #f7f9fa;
+	padding-bottom: 55px;
+
+	@include media-query(991px) {
+		padding-bottom: 40px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 30px;
+	}
+
+	.service-grids {
+		margin: 0 -15px;
+
+		@include media-query(767px) {
+			margin: 0 -7.5px;
+		}
+
+		.grid {
+			width: calc(33.33% - 30px);
+			float: left;
+			margin: 0 15px 50px;
+
+			@include media-query(991px) {
+				width: calc(50% - 30px);
+			}
+
+			@include media-query(767px) {
+				width: calc(50% - 15px);
+				margin: 0 7.5px 50px;
+			}
+
+			@include media-query(550px) {
+				width: calc(100% - 15px);
+				float: none;
+			}
+		}
+
+		.details {
+			padding: 35px 0 0 75px;
+			position: relative;
+
+			@include media-query(767px) {
+				padding: 25px 0 0 55px;
+			}
+		}
+
+		.fi {
+			position: absolute;
+			left: 0;
+			top: 20px;
+		}
+
+		.fi:before {
+			font-size: 50px;
+			font-size: calc-rem-value(50);
+			color: $theme-primary-color;
+
+			@include media-query(767px) {
+				font-size: 40px;
+				font-size: calc-rem-value(40);
+			}
+		}
+
+		h3 {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+			font-weight: 500;
+			color: $white;
+			margin: 0 0 0.5em;
+
+			@include media-query(767px) {
+				font-size: 17px;
+				font-size: calc-rem-value(17);
+			}
+
+			a {
+				color: $heading-color;
+			}
+
+			a:hover {
+				color: $theme-primary-color;
+			}
+		}
+
+		.grid:hover h3 a {
+			color: $theme-primary-color;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.4	cta-section-s2
+--------------------------------------------------------------*/
+.cta-section-s2 {
+	@include background-style("../images/cta-s2-bg.jpg", center top, cover, no-repeat, local);
+	position: relative;
+	padding: 120px 0 130px;
+	text-align: center;
+
+	@include media-query(991px) {
+		padding: 100px 0;
+	}
+
+	@include media-query(767px) {
+		padding: 80px 0;
+	}
+
+	&:before {
+		content: "";
+		@include overlay(transparentize($theme-secondary-color, 0.42));
+	}
+
+	p {
+		font-size: 24px;
+		font-size: calc-rem-value(24);
+		color: $white;
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+
+		@include media-query(767px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	h2 {
+		font-size: 60px;
+		font-size: calc-rem-value(60);
+		color: $white;
+		margin: 0.5em 0;
+
+		@include media-query(991px) {
+			font-size: 40px;
+			font-size: calc-rem-value(40);
+		}
+
+		@include media-query(767px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.5	latest-projects-section-s2
+--------------------------------------------------------------*/
+.latest-projects-section-s2 {
+	@extend .latest-projects-section;
+	padding-bottom: 70px;
+
+	@include media-query(991px) {
+		padding-bottom: 50px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 40px;
+	}
+
+	.owl-theme .owl-controls .owl-nav [class*=owl-] {
+	    padding: 16px 20px;
+	    background: #ffffff;
+	    border-radius: 0;
+	    box-shadow: 0 0 15px #88888866;
+	    color: #9c9999;
+
+	    &:hover {
+	    	background: $theme-primary-color;
+	    	color: $white;
+	    }
+	}
+
+	.owl-theme .owl-controls {
+		margin-top: 0; 
+		position: relative;
+		bottom: 35px;
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+#2.6	testimonials-section-s2
+--------------------------------------------------------------*/
+.testimonials-section-s2 {
+	background-color: #f7f9fa;
+	padding-bottom: 100px;
+
+	@include media-query(991px) {
+		padding-bottom: 80px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 70px;
+	}
+
+	.testimonial-grids {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+
+		img {
+			width: auto;
+			display: inline-block;
+		}
+
+		h4 {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			font-weight: 500;
+			margin: 1em 0 0.3em;
+		}
+
+		h4 + span {
+			font-size: 13px;
+			font-size: calc-rem-value(13);
+			color: #9a9494;
+		}
+
+		.grid {
+			background: $white;
+			padding: 50px 45px;
+
+			@include media-query(991px) {
+				padding: 40px 25px;
+			}
+		}
+	}
+
+	.client-info {
+		margin-bottom: 30px;
+	}
+
+	.client-pic {
+		max-width: 90px;
+		margin: 0 auto;
+		position: relative;
+
+		@include widther(768px) {
+			&:before,
+			&:after {
+				content: "";
+				@include background-style("../images/testimonials/quote.png", center center, 100%, no-repeat, local);
+				position: absolute;
+				top: 20px;
+				left: -100px;
+				width: 48px;
+				height: 34px;
+				opacity: 1;
+			}
+
+			&:after {
+				left: auto;
+				right: -100px;
+				-webkit-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	.client-pic img {
+		width: auto;
+		border-radius: 50%;
+	}
+
+	.client-quote {
+		max-width: 750px;
+		margin: 0 auto;
+
+		p {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			margin: 0;
+
+			@include media-query(767px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+	}
+
+	.owl-theme .owl-controls {
+		margin-top: 40px;
+	}
+
+	.owl-theme .owl-dots .owl-dot span {
+		background: $theme-primary-color;
+		opacity: 0.5;
+	}
+
+	.owl-theme .owl-dots .active span {
+		background: $theme-primary-color;
+		opacity: 1;
+	}
+
+}
+
+.testimonials-section-s3 {
+	@extend .testimonials-section-s2;
+	background-color: $white;
+	padding-bottom: 60px;
+
+	@include media-query(991px) {
+		padding-bottom: 40px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 30px;
+	}
+
+	.testimonial-grids {
+		margin: 0 -15px;
+
+		@include media-query(767px) {
+			margin: 0 -7.5px;
+		}
+	}
+
+	.testimonial-grids > .grid {
+		width: calc(50% - 30px);
+		float: left;
+		margin: 0 15px 50px;
+		box-shadow: 0 0 15px rgba(230, 225, 225, 0.5);
+
+		@include media-query(767px) {
+			width: calc(50% - 15px);
+			float: left;
+			margin: 0 7.5px 50px;
+		}
+
+		@include media-query(600px) {
+			width: calc(100% - 15px);
+			float: none;
+		}
+	}
+}

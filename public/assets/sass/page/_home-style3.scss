@@ -1,0 +1,119 @@
+/*--------------------------------------------------------------
+	#home style 3
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#3.1	about-us-section-s3
+--------------------------------------------------------------*/
+.about-us-section-s3 {
+
+	.feature-grids {
+		background: $white;
+		border: 1px solid #dce7eb;
+
+		@include media-query(991px) {
+			margin-bottom: 70px;
+		}
+
+		.grid {
+			border-bottom: 1px solid #dce7eb;
+			padding: 32px 25px 12px;
+			overflow: hidden;
+
+			@include media-query(991px) {
+				padding: 32px 25px 12px;
+			}
+
+			@include media-query(550px) {
+				padding: 20px 20px 0;
+				border-bottom: 1px solid #dce7eb;
+			}
+		}
+
+		> .grid:last-child {
+			border-bottom: 0;
+		}
+
+		.img-holder {
+			width: 50px;
+			float: left;
+		}
+
+		img {
+			max-width: 45px;
+			display: block;
+			margin-bottom: 25px;
+		}
+
+		h3 {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			margin: 0.8em 0 0.8em;
+			padding-left: 15px;
+			display: inline-block;
+			float: left;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.about-area {
+		@include widther(1200px) {
+			padding-left: 25px;
+		}
+	}
+
+	.about-area .details > div {
+		margin-top: 25px;
+		position: relative;
+		padding-left: 35px;
+	}
+
+	.about-area .details h4 {
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		font-weight: 500;
+		margin: 0 0 0.7em;
+	}
+
+	.about-area .details h4 i {
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: $theme-primary-color;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#3.2	services-section-s3
+--------------------------------------------------------------*/
+.services-section-s3 {
+	@extend .services-section-s2;
+	
+	padding-bottom: 75px;
+
+	@include media-query(991px) {
+		padding-bottom: 60px;
+	}
+
+	.service-grids {
+		.grid {
+			margin: 0 15px 30px;
+
+			@include media-query(767px) {
+				margin: 0 7.5px 15px;
+			}
+		}
+
+		.details {
+			padding: 25px 0 0 85px;
+			position: relative;
+
+			@include media-query(767px) {
+				padding: 25px 0 0 55px;
+			}
+		}
+	}
+}

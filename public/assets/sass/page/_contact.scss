@@ -1,0 +1,124 @@
+/*--------------------------------------------------------------
+	#contact page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#5.1	contact-pg-section
+--------------------------------------------------------------*/
+.contact-pg-section {
+	padding-bottom: 65px;
+
+	@include media-query(991px) {
+		padding-bottom: 75px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 65px;
+	}
+
+	form input,
+	form select,
+	form textarea {
+		background: $white;
+		width: 100%;
+		height: 50px;
+		border: 2px solid #eaf2f5;
+		border-radius: 2px;
+		box-shadow: none !important;
+
+		@include media-query(991px) {
+			height: 45px;
+		}
+
+		&:focus {
+			border-color: $theme-primary-color;
+		}
+	}
+
+	form textarea {
+		height: 180px;
+	}
+
+	form {
+		margin: 0 -7.5px;
+    	overflow: hidden;
+
+		@include placeholder-style(#9d9c9c, 15px, normal);
+
+	    select {
+	        display: inline-block;
+	        color: #a9a9a9;
+	        cursor:pointer;
+	        opacity: 1;
+	        padding: 6px 12px;
+	        font-size: 15px;
+	        font-size: calc-rem-value(15);
+	    }
+	}
+
+	form > div {
+		width: calc(50% - 15px);
+	    float: left;
+	    margin: 0 7.5px 15px;
+
+	    @include media-query(600px) {
+			width: calc(100% - 15px);
+	    	float: none;
+		}
+	}
+
+	form .fullwidth {
+		width: calc(100% - 15px);
+	}
+
+	.office-info {
+		position: relative;
+		padding: 55px 55px;
+		margin-top: -187px;
+		margin-left: 50px;
+
+		@include media-query(1199px) {
+			margin-left: 0;
+		}
+
+		@include media-query(991px) {
+			margin-top: 0;
+		}
+
+		&:before {
+			content: "";
+			@include overlay(transparentize($theme-primary-color, 0.05));
+		}
+
+		> div {
+			position: relative;
+		}
+
+		> div + div {
+			padding-top: 30px;
+			margin-top: 30px;
+			border-top: 1px solid transparentize($white, 0.85);
+		}
+
+		h3 {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+			font-weight: normal;
+			color: $white;
+			margin: 0 0 0.5em;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		li {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			color: $white;
+		}
+
+		ul > li + li {
+			margin-top: 8px;
+		}
+	}
+}

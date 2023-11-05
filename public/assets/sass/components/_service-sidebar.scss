@@ -1,0 +1,186 @@
+/*--------------------------------------
+	service single sidebar
+----------------------------------------*/
+.service-sidebar {
+	@include media-query(991px) {
+		max-width: 300px;
+		margin-top: 80px;
+	}
+
+	> .widget + .widget {
+		margin-top: 60px;
+	}
+
+	/*** service-list-widget ***/
+	.service-list-widget {
+		ul {
+			font-family: $heading-font;
+			list-style: none;
+			border-bottom: 0;
+			border: 4px solid #f1f5f7;
+		}
+
+		ul li {
+			border-bottom: 1px solid #f1f5f7;
+		}
+
+		a {
+			font-family: $heading-font;
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			background: $white;
+			font-weight: 500;
+			display: block;
+			color: #0a172b;
+			padding: 15px 24px;
+			position: relative;
+
+			&:before {
+				content: "";
+				background: $theme-primary-color;
+				width: 4px;
+				height: 100%;
+				position: absolute;
+				left: -4px;
+				top: 0;
+				opacity: 0;
+				@include transition-time(0.3s);
+			}
+		}
+
+		a:hover,
+		.current a {
+			color: $theme-primary-color;
+		}
+
+		a:hover:before,
+		.current a:before {
+			opacity: 1;
+		}
+	}
+
+
+	/*** download-widget ***/
+	.download-widget {
+		ul {
+			list-style: none;
+		}
+
+		ul > li + li {
+			margin-top: 5px;
+		}
+
+		ul a {
+			background: $theme-primary-color;
+			color: $white;
+			padding: 18px 25px;
+			font-weight: 500;
+			display: block;
+		}
+
+		ul i {
+			display: inline-block;
+			padding-right: 10px;
+			color: $white;
+		}
+
+		ul a:hover {
+			background: darken($theme-primary-color, 10%);
+		}
+	}
+
+	/*** contact-widget ***/
+	.contact-widget {
+		padding: 45px 40px;
+		position: relative;
+		text-align: center;
+
+		&:before {
+			content: "";
+			background: $theme-primary-color;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0.9;
+		}
+
+		> div {
+			position: relative;
+			z-index: 1;
+		}
+
+		h5 {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			font-weight: 500;
+			color: $white;
+			margin: 1em 0;
+			text-transform: capitalize;
+
+			span {
+				font-size: 36px;
+				font-size: calc-rem-value(36);
+				font-weight: bold;
+				display: block;
+				margin-top: 0.3em;
+			}
+		}
+
+
+		a {
+			font-family: $heading-font;
+			background-color: $white;
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			font-weight: 500;
+			color: $text-color;
+			padding: 10px 15px;
+			display: inline-block;
+			margin-top: 25px;
+			border-radius: 0;
+		}
+
+		a:hover {
+			color: $theme-primary-color;
+		}
+	}
+
+
+	/*** service-features-widget ***/
+	.service-features-widget {
+		padding: 45px 30px;
+		position: relative;
+		border: 2px solid #f7f7f7;
+
+		&:before {
+			font-family: "Themify";
+			content: "\e61f";
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+			color: $theme-primary-color;
+			position: absolute;
+			right: 30px;
+			top: 40px;
+			opacity: 0.5;
+		}
+
+		h3 {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			margin: 0 0 0.8em;
+			text-transform: capitalize;
+		}	
+
+		ol {
+			list-style-position: inside;
+			padding-left: 0;
+			margin: 0;
+		}	
+
+		ol > li + li {
+			margin-top: 8px;
+		}
+	}
+}

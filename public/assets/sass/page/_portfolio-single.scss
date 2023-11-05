@@ -1,0 +1,219 @@
+/*--------------------------------------------------------------
+	#portfolio single page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#8.1	portfolio-sigle-section
+--------------------------------------------------------------*/
+.portfolio-sigle-section {
+	.project-info {
+		width: 340px;
+		padding: 45px;
+		border: 5px solid #e9f2fb;
+		float: right;
+		margin-top: 15px;
+
+		@include media-query(991px) {
+			width: auto;
+			max-width: 300px;
+			float: none;
+			margin: 0;
+			padding: 25px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		ul > li:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+
+		li {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			margin-bottom: 7px;
+			padding-bottom: 7px;
+		}
+
+		li span {
+			font-weight: 600;
+			color: #333;
+			min-width: 100px;
+			display: inline-block;
+		}
+	}
+
+	.project-details {
+		width: calc(100% - 400px);
+		float: left;
+
+		@include media-query(991px) {
+			width: 100%;
+			float: none;
+			margin-top: 70px;
+		}
+	}
+
+	.content-area {
+		padding-top: 70px;
+	}
+
+	.content-area h2 {
+		font-size: 32px;
+		font-size: calc-rem-value(32);
+		margin: 0 0 0.8em;
+
+		@include media-query(991px) {
+			font-size: 28px;
+			font-size: calc-rem-value(28);
+		}
+
+		@include media-query(767px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+	}
+
+	.content-area p {
+		margin-bottom: 1.7em;
+	}
+
+	.challange-solution-section {
+		margin-top: 70px;
+		clear: both;
+		float: none;
+
+		@include media-query(991px) {
+			margin-top: 30px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		ul li {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+
+			@include media-query(991px) {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+			}
+		}
+
+		ul > li + li {
+			margin-top: 8px;
+		}
+
+		li i {
+			color: $theme-primary-color;
+			display: inline-block;
+			padding-right: 7px;
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	.prev-next-project {
+		border: 2px solid #f2f7fd;
+		padding: 28px 22px;
+		margin-top: 80px;
+		overflow: hidden;
+
+		@include media-query(767px) {
+			text-align: center;
+			padding: 35px 22px;
+		}
+
+		& > div {
+			display: inline-block;
+			position: relative;
+			padding-left: 75px;
+
+			@include media-query(767px) {
+				display: block;
+				float: none;
+				padding: 0;
+			}
+		}
+
+		& > div:first-child {
+			float: left;
+
+			@include media-query(767px) {
+				display: block;
+				float: none;
+				margin-bottom: 25px;
+			}
+		}
+
+		& > div:last-child {
+			float: right;
+			padding: 0 75px 0 0;
+
+			@include media-query(767px) {
+				display: block;
+				float: none;
+				padding: 0;
+			}
+		}
+
+		.icon {
+			position: absolute;
+			left: 0;
+			top: 5px;
+			border-right: 1px solid #e8e8e8;
+			padding-right: 18px;
+
+			@include media-query(767px) {
+				display: none;
+			}
+
+			i {
+				font-size: 30px;
+				font-size: calc-rem-value(30);
+				color: $theme-primary-color;
+			}
+		}
+
+		& > div:last-child .icon {
+			left: auto;
+			right: 0;
+			border-left: 1px solid #e8e8e8;
+			padding-left: 18px;
+			border-right: 0;
+			padding-right: 0;
+		}
+
+		a {
+			display: block;
+		}
+
+		a > span {
+			font-size: 12px;
+			font-size: calc-rem-value(12);
+			color: #7b7b7b;
+			text-transform: uppercase;
+		}
+
+		a > h5 {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			color: $heading-color;
+			margin: 0.5em 0 0;
+			@include transition-time(0.2s);
+
+			@include media-query(767px) {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+				margin: 0.1em 0 0;
+			}
+		}
+
+		a:hover h5 {
+			color: $theme-primary-color;
+		}
+	}
+}
