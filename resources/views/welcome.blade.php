@@ -500,8 +500,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
                 <div class="row">
                     <div class="col col-xs-12 sortable-gallery">
-                <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/e22725c439cc552abc7c07e8503ab682.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>        
-                        
+                    <div
+  loading="lazy"
+  data-mc-src="9d9b90eb-e79b-4818-a4d7-d5eb32dae7da#null"></div>
+        
+<script 
+  src="https://cdn2.woxo.tech/a.js#642ad922d1c6300eee783455" 
+  async data-usrc>
+</script>         
                 </div>
                 </div>
             </div> <!-- end container -->
